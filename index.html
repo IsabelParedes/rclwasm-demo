@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.svg">
+
+    <title>RCLWASM</title>
+
+</head>
+<body>
+
+    <script src="./rosWorkers/rosMain.js"></script>
+
+    <h2>ROS Client Libraries: <code>rclwasm</code></h2>
+
+    <h3>Publisher</h3>
+    <div class="demoBox">
+        <div class="inputRcl">
+            <form id="publisherForm">
+                <input type="text" name="rosnodeName" value="nodeName"><br>
+                <input type="text" name="topicName" value="topicName"><br>
+                <input type="text" name="message" value="messageString"><br>
+                <input type="text" name="mseconds" value="timeSeconds">
+            </form>
+        </div>
+        <div class="buttonRcl">
+            <button class="startBtn" onclick="startRCLPub()">START</button>
+            <button class="stopBtn" onclick="stopRCLPub()">STOP</button>
+            <button class="clearBtn" onclick="clearRCLPub()">CLEAR</button>
+        </div>
+        <div class="outputRcl">
+            <textarea id="rclpubOutput"  rows="8"></textarea>
+        </div>
+    </div>
+
+    <h3>Subscriber</h3>
+    <div class="demoBox">
+        <div class="inputRcl">
+            <form id="subscriberForm">
+                <input type="text" name="rosnodeName" value="nodeName"><br>
+                <input type="text" name="topicName" value="topicName"><br>
+            </form>
+        </div>
+        <div class="buttonRcl">
+            <button class="startBtn" onclick="startRCLSub()">START</button>
+            <button class="stopBtn" onclick="stopRCLSub()">STOP</button>
+            <button class="clearBtn" onclick="clearRCLSub()">CLEAR</button>
+        </div>
+        <div class="outputRcl">
+            <textarea id="rclsubOutput"  rows="8"></textarea>
+        </div>
+    </div>
+
+</body>
